@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<stdlib.h>
+int menu();
+void bus();
+void cycle();
+void riksha();
+void delete();
+void showdetail();
+int nor=0,nob=0,noc=0,amount=0,count=0;
+void main()
+{
+    while(1)
+    {
+    //clrscr();
+  switch(menu())  
+  {
+      case 1:
+      bus();
+      break;
+      
+      case 2:
+      cycle();
+      break;
+      
+      case 3:
+      riksha();
+      break;
+      
+      case 4:
+      showdetail();
+      break;
+      
+      case 5:
+      delete();
+     break;
+      
+      case 6:
+      exit(0);
+      
+      default :
+      printf("\nInvalid Choice:");
+  }
+    }
+}
+int menu()
+{
+    int ch;
+    printf("\n1.enter bus:");
+     printf("\n2.enter cycle:");
+      printf("\n3.enter riksha:");
+       printf("\n4.show status:");
+       printf("\n5. delete data:");
+       printf("\n Exit:");
+       printf("\n\nenter your choice:\n");
+       scanf("%d",&ch);
+       return(ch);
+}
+void delete()
+{
+    nob=0;
+    noc=0;
+    nor=0;
+    amount=0;
+    count=0;
+
+}
+void showdetail()
+{
+    printf("\n number of bus=%d",nob);
+     printf("\n number of cycle=%d",noc);
+      printf("\n number of riksha=%d",nor);
+       printf("\n total number of vehicle=%d",count );
+       printf("\n total gain amount=%d",amount);
+}
+void riksha()
+{
+    printf("\n entry successful");
+    nor++;
+    amount=amount+50;
+    count++;
+    
+}
+void cycle()
+{
+    printf("\n entry successful");
+    noc++;
+    amount=amount+20;
+    count++;
+    
+}
+void bus()
+{
+    printf("\n entry successful");
+    nob++;
+    amount=amount+100;
+    count++;
+}
+
